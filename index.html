@@ -2,5 +2,23 @@
 <header><title>This is title</title></header>
 <body>
 Hello world
+  
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://mcib-test.bmwdigital.io/api/v1/activations?orderNumber={{orderNumber}}&orderDate={{orderDate}}",
+  "method": "GET",
+  "headers": {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+    "Cache-Control": "no-cache"
+  }
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+  
+  
 </body>
 </html>
