@@ -1,24 +1,19 @@
 <html>
-<header><title>This is title</title></header>
-<body>
-Hello world
-  
-var settings = {
-  "async": true,
-  "crossDomain": true,
-  "url": "https://mcib-test.bmwdigital.io/api/v1/activations?orderNumber={{orderNumber}}&orderDate={{orderDate}}",
-  "method": "GET",
-  "headers": {
-    "Accept": "application/json",
-    "Content-Type": "application/json",
-    "Cache-Control": "no-cache"
-  }
-}
+<head>
 
-$.ajax(settings).done(function (response) {
-  console.log(response);
-});
+<title>Dealer cockpit</title>
+
+</head>
+<body>
+Enter the order number and date below:
   
+<form action="https://mcib-test.bmwdigital.io/api/v1/activations" method="get">
+        <div id="formtext">Order number:</div>
+        <input type="text" name="orderNumber">
+        <div id="formtext"><br>Order date:</div>
+        <input type="date" name="orderDate"><br>
+        <input type="submit" name="submit" value="Submit">
+</form>
   
 </body>
 </html>
